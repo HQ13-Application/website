@@ -63,13 +63,13 @@ class Handler extends ExceptionHandler
         $guard=array_get($exception->guards(),0);
         switch($guard){
             case 'admin':
-            return redirect()->guest(route('admin.login'));
-                }
+                return redirect()->guest(route('admin.login'));
+                
                 break;
             default:
             return redirect()->guest(route('login'));
                 break;       
-
+            }
 
    
     }
