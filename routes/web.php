@@ -1,5 +1,10 @@
 <?php
 
+
+
+
+use App\User;
+use Illuminate\Support\Facades\Input;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +17,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('search');
 });
 
 Auth::routes();
@@ -27,3 +32,12 @@ Route::get('admin-password/reset','Admin\ForgotPasswordController@showLinkReques
 Route::post('admin-password/reset','Admin\ResetPasswordController@reset');
 Route::get('admin-password/reset/{token}','Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
 
+
+
+Route::any('/search',function(){
+    $q = Input::get ( 'q' );
+    $user = User::where('firstname','LIKE','%'.$q.'%')->orWhere('email','LIKE','%'.$q.'%')->get();
+    if(count($user) > 0)
+        return view('admin.home')->withDetails($user)->withQuery ( $q );
+    else return view ('admin.home')->withMessage('No Details found. Try to search again !');
+});
