@@ -45,31 +45,13 @@
                 </div>
             </div>
 
+
+
+
+
+            
+
             <!-- show search -->
-            <!-- <div class="container">
-                @if(isset($details))
-                   <h4>  The Search results for your query <b> {{ $query }} </b> are : </h4>
-                <h2>Sample User details</h2>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>last name</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($details as $user)
-                        <tr>
-                            <td>{{$user->firstname}}</td>
-                            <td>{{$user->lastname}}</td>
-                            <td>{{$user->email}}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @endif
-            </div> -->
             @if(isset($details))
             <div class="panel panel-default">
             <!-- Default panel contents -->
@@ -102,6 +84,23 @@
             @endif
             </div>
         <!--endsearch -->
+
+
+
+
+
+
+
+
+
+<!-- adduser  -->
+
+
+
+
+
+
+
 
 
 
