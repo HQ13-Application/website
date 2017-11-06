@@ -23,7 +23,7 @@ Route::get('/admin/usermanage', function () {
 
 
 Route::get('/', function () {
-    return view('search');
+    return view('index');
 });
 
 Auth::routes();
