@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Input;
 |
 */
 
+Route::get('/admin/usermanage', function () {
+    //
+})->name('admin.usermanage');
+
+
+
 Route::get('/', function () {
     return view('search');
 });
