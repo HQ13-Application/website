@@ -42,17 +42,25 @@
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </ul>
-
+            @if (Route::has('login'))
             <ul class="nav justify-content-end">
+                 @if (Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/home') }}">
+                      Home</a>
+                    </li>
+                    @else
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ url('/login') }}">
                         <i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ url('/register') }}">
                         <i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
                 </li>
+                @endif
             </ul>
+            @endif
         </div>
     </nav>
 
