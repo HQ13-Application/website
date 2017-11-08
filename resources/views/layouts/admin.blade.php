@@ -38,7 +38,7 @@
                     <a href="#">Profile</a>
                 </li>
                 <li>
-                    <a href="{{ url('/admin/usermanage') }}" >Users</a>
+                    <a href="{{ url('members') }}" >Users</a>
                 </li>
                 <li>
                     <a href="#">Posts</a>
