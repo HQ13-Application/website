@@ -38,7 +38,7 @@
                     <a href="#">Profile</a>
                 </li>
                 <li>
-                    <a href="{{ URL::route('admin.usermanage') }}" >Users</a>
+                    <a href="{{ url('/admin/usermanage') }}" >Users</a>
                 </li>
                 <li>
                     <a href="#">Posts</a>
@@ -54,7 +54,7 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <h1>Welcome </h1>
+                <h1 id="menu-toggle">Welcome </h1>
                
                 @yield('content')
 
@@ -65,7 +65,7 @@
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-        <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+    
     </div>
     <!-- /#wrapper -->
 
@@ -73,7 +73,7 @@
    
 
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script> -->
     
 
     <!-- Menu Toggle Script -->
