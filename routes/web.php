@@ -16,15 +16,24 @@ use Illuminate\Support\Facades\Input;
 |
 */
 
-Route::get('/admin/usermanage', function () {
-    //
-})->name('admin.usermanage');
+// Route::get('/admin/usermanage', function () {
+//     //
+// })->name('admin.usermanage');
 
 
 
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/usermanage', function () {
+    return view('usermanage');
+});
+
+
+
+Route::resource('members','MemberController');
+
 
 Auth::routes();
 
@@ -44,6 +53,6 @@ Route::any('/search',function(){
     $q = Input::get ( 'q' );
     $user = User::where('firstname','LIKE','%'.$q.'%')->orWhere('email','LIKE','%'.$q.'%')->get();
     if(count($user) > 0)
-        return view('admin.home')->withDetails($user)->withQuery ( $q );
-    else return view ('admin.home')->withMessage('No Details found. Try to search again !');
+        return view('usermanage')->withDetails($user)->withQuery ( $q );
+    else return view ('usermanage')->withMessage('No Details found. Try to search again !');
 });

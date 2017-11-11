@@ -171,11 +171,20 @@ return [
         /*
          * Application Service Providers...
          */
+<<<<<<< HEAD
         Blurizon\Providers\AppServiceProvider::class,
         Blurizon\Providers\AuthServiceProvider::class,
         // Blurizon\Providers\BroadcastServiceProvider::class,
         Blurizon\Providers\EventServiceProvider::class,
         Blurizon\Providers\RouteServiceProvider::class,
+=======
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+>>>>>>> d732993a59f3ad8fceeb74a906a8f83c0c5ac502
 
     ],
 
@@ -225,6 +234,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
