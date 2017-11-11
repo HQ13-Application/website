@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace Blurizon;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Notifications\AdminResetPasswordNotification;
+use Blurizon\Notifications\AdminResetPasswordNotification;
 class Admin extends Authenticatable
 {
     use Notifiable;

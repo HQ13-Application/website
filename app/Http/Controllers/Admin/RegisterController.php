@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Blurizon\Http\Controllers\Admin;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use Blurizon\User;
+use Blurizon\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -58,7 +58,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \Blurizon\User
      */
     protected function create(array $data)
     {

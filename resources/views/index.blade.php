@@ -45,11 +45,11 @@
 
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ url('/login') }}">
                         <i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ url('/register') }}">
                         <i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
                 </li>
             </ul>
@@ -137,9 +137,10 @@
         <p class="lead text-center">
             <img src="./img/logo.png" width="300" class="d-inline-block" alt=""> </a>
         </p>
-        <p class="lead text-center">This is aa simple hero un simple hero unit, a simple jumbotor</p>
-        <p class="lead text-center">le hero un simple hero unit, a simple jumbotor</p>
-        <p class="lead text-center">e hero unit, a simple jumbotor</p>
+        <blockquote class="blockquote">
+
+        <p class="lead abut">We have chosen the team to establish the company very carefully and with different specialties with long experience and work to take into account the readiness for long-term success, the same approach that we work to get our customers individuals, families or institutions. We are a talented group that believes that marketing should be an enjoyable tour, which helps us to think creatively and produce creative work for our customers as well.</p>
+       </blockquote>
         <hr class="my-3">
 
         <div class="footer-social-icons">
@@ -202,7 +203,7 @@
                     <img class="card-img-top" src="./img/product/covers.png" alt="Card image cap">
                 </div>
                 <div class="swiper-slide">
-                    <img class="card-img-top" src="./img/product/GEFORCE® GTX 1080 Ti.png" alt="Card image cap">
+                    <img class="card-img-top" src="./img/product/GEFORCE GTX.png" alt="Card image cap">
                 </div>
                 <div class="swiper-slide">
                     <img class="card-img-top" src="./img/product/ink.png" alt="Card image cap">
